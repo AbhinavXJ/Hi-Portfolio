@@ -6,10 +6,13 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import CardComponent from "@/components/ui/CardComponent";
 import fetchDataAction from "@/actions";
+import { useRouter } from 'next/navigation';
 
 
 
 export default function Search() {
+   const router = useRouter()
+    
     const [user, setUser] = useState(null)
 
     const [username, setUserName] = useState("")
@@ -18,8 +21,8 @@ export default function Search() {
         const user = await fetchDataAction(`https://api.github.com/users/${username}`)
 
         setUser(user)
-
-
+        router.push(`/${user.login}`)
+        
       
       
       }
@@ -47,7 +50,6 @@ export default function Search() {
                 >Search</Button>
                 </div>
       
-         {user && <CardComponent user={user}></CardComponent>}
     </div>
 
 
