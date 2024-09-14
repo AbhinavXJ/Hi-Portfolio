@@ -32,7 +32,7 @@ const CardComponent = ({user,social,pr,issues,stars,watchers}) => {
     // console.log(user)
     return (
 
-    <div className='  grid grid-rows-[auto,1fr] grid-cols-[1fr,3fr] gap-x-4 gap-y-3'>
+    <div className=' flex flex-col gap-4  lg:grid lg:grid-rows-[auto,1fr] lg:grid-cols-[1fr,3fr] lg:gap-x-4 lg:gap-y-3'>
 
 
         <div className=''>
@@ -65,7 +65,7 @@ const CardComponent = ({user,social,pr,issues,stars,watchers}) => {
                
         </Card>
         
-        <div className='grid grid-cols-3 gap-x-4 gap-y-2 mt-4 '>
+        <div className='flex flex-col gap-4  lg:grid lg:grid-cols-3 lg:gap-x-4 lg:gap-y-2 mt-4 '>
                     
                     <Link href={`https://github.com/${user.login}?tab=repositories`} target='_blank' className='bg-neutral-900 border-white border-opacity-15 border-[0.5px] text-white text-center rounded-sm  py-1' >
                     Public Repos: {user.public_repos} 
@@ -128,7 +128,7 @@ const CardComponent = ({user,social,pr,issues,stars,watchers}) => {
        
 
         <div className=' '>
-                <Card className="h-full flex flex-col justify-evenly bg-neutral-900  border-white border-opacity-15 border-[0.5px]">
+                <Card className="h-full flex flex-col gap-4 justify-evenly bg-neutral-900  border-white border-opacity-15 border-[0.5px]">
                         
                             <Label className="text-3xl py-3 rounded-sm  mx-2  text-white flex items-center justify-center border-[0.5px] border-opacity-15 border-white">
                             {user.name}
@@ -154,7 +154,7 @@ const CardComponent = ({user,social,pr,issues,stars,watchers}) => {
                 </div>
         
         
-        <div className='grid grid-cols-[1fr,1fr,1fr] gap-4  '>
+        <div className='flex flex-col gap-4 lg:grid lg:grid-cols-[1fr,1fr,1fr] lg:gap-4  '>
            <div className='bg-neutral-900 border-white border-opacity-15 border-[0.5px] px-4 '>    
                     <Card className="bg-neutral-900 flex flex-col  p-2 my-2 border-white border-opacity-15 border-[0.5px]">
                     <CardTitle className="text-white text-3xl">Contact</CardTitle>
