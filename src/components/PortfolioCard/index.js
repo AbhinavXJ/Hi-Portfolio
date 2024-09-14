@@ -7,15 +7,15 @@ import CardComponent from "@/components/ui/CardComponent";
 
 
 
-export default function PortfolioCard(user) {
-
+export default function PortfolioCard({user,social,pr,issues,stars,watchers}) {
+// console.log(stars)
   return (
-    <div className=" h-[80%] w-[70%]"
+    <div className=" min-h-screen w-[80%] flex items-center "
     
     >
           
       
-         {user && <CardComponent user={user.user}></CardComponent>}
+         {user && <CardComponent user={user} social={social} pr={pr} issues={issues} stars={stars} watchers={watchers}></CardComponent>}
     </div>
 
 
