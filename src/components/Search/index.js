@@ -29,10 +29,10 @@ export default function Search() {
       
 
   return (
-    <div className="flex flex-col gap-3">
-            <div className="flex w-full max-w-sm items-center space-x-2">
+    <div className="flex flex-col">
+            <div className="flex  items-center space-x-2">
                 <Input 
-                className="bg-white min-w-96"
+                className="bg-white w-fit"
                 placeholder="Enter github username"
                 
                 value={username}
