@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {
     Card,
     CardContent,
@@ -14,9 +14,11 @@ import { Label } from '../label'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Map from '@/components/Map'
 
 const CardComponent = ({user,social,pr,issues,stars,watchers}) => {
     const [url, setUrl] = useState('');
+    const [location,setLocation]=useState(user.location)
 
     useEffect(() => {
       // This will run only on the client-side
@@ -240,9 +242,10 @@ const CardComponent = ({user,social,pr,issues,stars,watchers}) => {
             </Card>
 
             <Card className=" bg-neutral-900 text-white border-white border-opacity-15 border-[0.5px] flex justify-center"> 
-            <div className='text-center '>
-                Map
-                </div>
+           
+                        <Map location={location}>
+                            
+                        </Map>
             
           
            
