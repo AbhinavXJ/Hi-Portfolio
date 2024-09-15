@@ -95,6 +95,7 @@ const CardComponent = ({user,social,pr,issues,stars,watchers}) => {
                         height={30}
                         width={30}
                         alt='link'
+                        className=''
                         
                         >
 
