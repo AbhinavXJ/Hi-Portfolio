@@ -4,7 +4,6 @@ import React from 'react'
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import CardComponent from "@/components/ui/CardComponent";
 import fetchDataAction from "@/actions";
 import { useRouter } from 'next/navigation';
 

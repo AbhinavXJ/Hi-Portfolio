@@ -17,6 +17,7 @@ export default async function fetchDataAction(url){
           }
       });
         const data = await result.json()
+        console.log("datajo aya hai wo hai bawa : " + data);
         const data_send = JSON.parse(JSON.stringify(data))
         // revalidatePath('/')
         return data_send

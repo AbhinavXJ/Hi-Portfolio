@@ -26,6 +26,7 @@ function PortfolioPage({params:{id}}) {
         const issuesData = await fetchDataAction(`https://api.github.com/search/issues?q=author:${id}+type:issue`);
         const starsData = await fetchStar(`https://api.github.com/users/${id}/repos`);
         const watchersData = await fetchWatchers(`https://api.github.com/users/${id}/repos`);
+        console.log(userData)
         setLoading(false)
         setUser(userData);
         setSocial(socialData);
